@@ -757,7 +757,7 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_label_STOPSITE_LIST_IKN_0_eval_expression(context) {
+function exp_label_STOPSITE_POINTS_IKN_2_eval_expression(context) {
     // 'DAY ' + "DAY" + ' ' + 'STOP ' + "STOP" + ':' + '\n' + "STOPSITE"
 
     var feature = context.feature;
@@ -770,14 +770,14 @@ function exp_label_STOPSITE_LIST_IKN_0_eval_expression(context) {
 }
 
 
-function exp_label_STOPSITE_LIST_MAHAKAM_1_eval_expression(context) {
-    // 'DAY ' + "day" + ' STOP ' + "id" + '\n' + "STOPSITE"
+function exp_label_STOPSITE_POINTS_MAHAKAM_3_eval_expression(context) {
+    // 'DAY ' + "DAY" + ' STOP ' + "id" + '\n' + "STOPSITE"
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return ((((('DAY ' + feature.properties['day'] ) + ' STOP ') + feature.properties['id'] ) + '\n') + feature.properties['STOPSITE'] );
+        return ((((('DAY ' + feature.properties['DAY'] ) + ' STOP ') + feature.properties['id'] ) + '\n') + feature.properties['STOPSITE'] );
     } else {
-        return ((((('DAY ' + feature['day'] ) + ' STOP ') + feature['id'] ) + '\n') + feature['STOPSITE'] );
+        return ((((('DAY ' + feature['DAY'] ) + ' STOP ') + feature['id'] ) + '\n') + feature['STOPSITE'] );
     }
 }
